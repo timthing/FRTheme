@@ -7,7 +7,11 @@ Template Name: Custom Page Example
 <?php get_header(); ?>
 
 			<div id="content">
-
+				<div id="pageheader" class="feature">
+					<div class="featurecontent">
+						
+					</div>
+				</div>
 				<div id="inner-content" class="wrap clearfix">
 
 						<div id="main" class="twelvecol first clearfix" role="main">
