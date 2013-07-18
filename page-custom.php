@@ -13,7 +13,7 @@ Template Name: Custom Page Example
 					</div>
 				</div>
 				<div id="inner-content" class="wrap clearfix">
-test
+
 						<div id="main" class="twelvecol first clearfix" role="main">
 							
 							<article>

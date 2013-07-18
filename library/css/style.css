@@ -671,6 +671,9 @@ BUTTONS
     background-image: -o-linear-gradient(top, #1681c4, #1990db);
     background-image: linear-gradient(to bottom, #1681c4, #1990db); }
 
+/*********************
+Border Radius
+*********************/
 /*
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If
@@ -1327,6 +1330,24 @@ you can add resource intensive styles.
   /*********************
   HEADER STYLES
   *********************/
+  .pageheader {
+    overflow: hidden;
+    height: 410px; }
+    .pageheader .featurecontent {
+      max-width: 960px;
+      height: 410px;
+      background-image: url("/library/img/img_feature.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      -moz-border-radius: 10px 10px 0 0;
+      -webkit-border-top-left-radius: 10px;
+      -webkit-border-top-right-radius: 10px;
+      -webkit-border-bottom-right-radius: 0;
+      -webkit-border-bottom-left-radius: 0;
+      border-radius: 10px 10px 0 0; 
+      }
+
   /*********************
   NAVIGATION STYLES
   *********************/

@@ -34,6 +34,21 @@ HEADER STYLES
 .header {}
 
 	#logo {}
+	
+		.pageheader{
+		overflow: hidden;
+		height: 410px;
+		.featurecontent {
+			max-width: 960px;
+			height: 410px;
+			background-image: url("/library/img/img_feature.png");
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			@include border_radius (10px, 10px, 0, 0);
+		}
+	}
+
 
 /*********************
 NAVIGATION STYLES
