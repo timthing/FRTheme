@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: Freek Rooze
+Author:	Tim de Groot
 
 Stylesheet: Base Mobile Stylesheet
 
@@ -16,11 +16,12 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: $serif;
+	font-family: $sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
-	color: #565656;
+	color: $text_color;
 	background-color: $body_background_color;
+	-webkit-font-smoothing: antialiased;
 }
 
 /********************
@@ -73,9 +74,44 @@ LAYOUT & GRID STYLES
 	margin: 0 auto;
 }
 
-#main {
+.content-wrap {
+	padding: 0 6%;
+}
+
+#main {}
+
+section {
+  zoom: 1;
+	&:before, &:after { content: ""; display: table; }
+	&:after { clear: both; }	
+}
+
+#inner-content  {
 	background-color: $main_background_color;
-	padding: $main_padding;
+	@include border-radius(0, 0, 5px, 5px);
+
+	section {
+		padding: 95px 0;
+	}
+	
+	section.no-padding {
+		padding: 0;
+	}
+	
+	section.entry-content {
+		padding: 0;
+	}
+	
+}
+
+.sixcol.coaching-intro {
+	text-align: center;
+	padding: 0px 4%;
+	margin: 0 0 4em 0;
+}
+
+.section-blue{
+	background-color: $section_background_color;
 }
 
 /*********************
@@ -84,10 +120,13 @@ LINK STYLES
 
 a, a:visited {
 	color: $link-color;
+	text-decoration: none;
+	transition: all 0.2s ease-in-out;
 
 	/* on hover */
 	&:hover, &:focus {
 		color: $link-hover;
+		text-decoration: none;
 	}
 
 	/* on click */
@@ -106,14 +145,32 @@ a, a:visited {
 	}
 }
 
+#Contact a, #Contact a:visited {
+	color: $text_color;
+	text-decoration: none;
+
+	/* on hover */
+	&:hover, &:focus {
+		color: $link-color;
+		text-decoration: none;
+	}
+
+	/* on click */
+	&:active {
+
+	}
+
+}
+
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-	font-family: $sans-serif;
+	font-family: $sans-serif-headers;
 	text-rendering: optimizelegibility;
-	font-weight: 500;
+	font-weight: 300;
+	color: $darkgrey;
 	/*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -128,16 +185,22 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 h1, .h1 {
 	font-size: 2.5em;
 	line-height: 1.333em;
+	margin: 0.3em 0;
 }
 
 h2, .h2 {
-	font-size: 1.75em;
+	font-size: 2.4em;
 	line-height: 1.4em;
-	margin-bottom: 0.375em;
+	font-weight: 300;
+	margin: 0 0 0.375em 0;
+	width: 100%;
+	text-align: center;
 }
 
 h3, .h3 {
-	font-size: 1.125em;
+	font-family: $sans-serif;
+	font-size: 1.4em;
+	font-weight: 400;
 }
 
 h4, .h4 {
@@ -153,18 +216,106 @@ h5, .h5 {
 }
 
 /*********************
+BASIC STYLES
+*********************/
+
+img {
+	vertical-align: middle;
+}
+
+hr {
+	border: 1px solid $lightestgrey;
+}
+
+
+.section-blue {
+
+	hr {
+		border: 1px solid $lighterblue;
+	}
+	
+}
+
+/*********************
 HEADER STYLES
 *********************/
 
 .header {
-	background-color: $header_background_color;
-}
+	background-color: $header_background_color;	
+	height: 84px;
 
-	#logo {
-		float: left;
-		padding: $main_padding;
+	#inner-header {
+		background-color: $header_background_color;	
+		position: fixed;
+		margin-bottom: 0px;
+		z-index: 100;
+		overflow: visible;
+		right: 0;
+		left: 0;
+		top: 0;
+		opacity: 0.95;
+		height: auto;
+		min-height: 84px;
+		@include border-radius(0, 0, 5px, 5px);
+		
+		#logo {
+			float: left;
+			margin: 18px 0 0 20px;
+			width: 49px;
+			
+			img {
+				width: 100%;
+			}	
+		
+		}
+		
 	}
 
+}
+
+
+		#pageheader{
+		overflow: hidden;
+		width: 100%;
+		background-color: $header_background_color;	
+		
+			.featurecontent {
+				position: relative;
+				height: 300px;
+				margin: 0 auto;
+				background-image: url("/wp-content/themes/FR/library/images/img_feature.jpg");
+				background-position: 54% center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				@include border-radius(5px, 5px, 0, 0);
+				
+				img {
+					max-width: 100%;
+					@include border-radius(5px, 5px, 0, 0);
+				}				
+				
+				.h1 {
+					position: absolute;
+					top: 20px;
+					left: 8%;
+					
+					h1 {
+						color: #ffffff;
+						font-size: 0.85em;
+						font-weight: 400;
+						max-width: 60%;
+						min-width: 245px;
+					}
+					
+					img {
+						width: 153px;
+					}
+				}
+				
+			}
+			
+		}
+		
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -177,30 +328,46 @@ the navs on the site so our css is cleaner
 and more scalable.
 */
 
-.nav {
-	border: 1px solid #ccc;
+nav {
+	border: 0;
 	border-bottom: 0;
+	overflow: hidden;
+	width: 100%;
+	
+	ul#menu-global {
+		margin-top: 10px;
+		float: none;
+	    width: 100%;  
+	    display: none;
+		
+		li {
 
-	li {
-
-		a {
-			display: block;
-			text-decoration: none;
-			padding: 10px 10px;
-			background-color: transparent;
-			border-bottom: 1px solid #ccc;
-
-			/*
-			remember this is for mobile ONLY, so there's no need
-			to even declare hover styles here, you can do it in
-			the style.scss file where it's relevant. We want to
-			keep this file as small as possible!
-			*/
-			&:hover, &:focus {
-
+			a, a:visited, a:active {
+				display: block;
+				text-decoration: none;
+				padding: 10px 20px;
+				background-color: transparent;
+				border-bottom: 0;
+				color: $link-color-nav;
+				font-family: $sans-serif;
+				font-size: 18px;
+				@include transition(all 0.2s ease-in-out);
+	
+				/*
+				remember this is for mobile ONLY, so there's no need
+				to even declare hover styles here, you can do it in
+				the style.scss file where it's relevant. We want to
+				keep this file as small as possible!
+				*/
+				&:hover, &:focus {
+					color: $link-hover-nav;
+				}
 			}
+		
 		}
 
+
+		
 		&:first-child {}
 
 		&:last-child {}
@@ -248,22 +415,130 @@ and more scalable.
 
 } /* end .nav */
 
+#pull {
+    display: block;
+    position: absolute;
+    top: 27px;
+    right: 20px;
+    width: 40px;
+    
+    img {
+	    width: 100%;
+    }
+}
+
+
 
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 
 #content {
-	margin-top: 0;
+	margin-top: 0px;
 }
 
-		.hentry {
+.section_title {
 
-			header {}
+	p {
+		padding: 0 4%;
+		text-align: center;
+		font-size: 1.15em;
+		font-weight: 400;
+		color: $lightgrey;
+		margin: 0 0 3.5em 0;
+	}
+	
+}
 
-			footer {}
+.coaching-intro {
+	
+	p {
+		margin: 1em 0 2em 0;
+	}
+	
+}
 
-		} /* end .hentry */
+.section-blue{
+	
+	.section_title {
+		
+		h2 {
+			color: $white;
+		}
+		
+		p {
+			color: $lighterblue;
+		}
+		
+	}
+	
+	ul {
+		width: 75%;
+		margin: 0 auto 95px auto;
+		/*border: 1px solid $lighterblue;*/
+		@include border-radius(5px, 5px, 5px, 5px);
+				
+		li {
+			color: $white;
+			font-family: $serif;
+			font-size: 1.4em;
+			font-weight: 400;
+			margin: 40px 0; 
+			
+			a {
+				color: $white;
+				text-decoration: none;
+				display: block;
+				padding: 40px;
+				border: 2px solid $lighterblue;
+				@include transition(all 0.2s ease-in-out);
+				@include border-radius(5px, 5px, 5px, 5px);
+				
+				&:hover {
+					color: $lighterblue;
+				}
+				
+			}
+		}
+		
+	}
+	
+}
+
+
+.hentry {
+
+	border-top: 1px solid $lightestgrey;
+	margin: 25px 0;
+	margin: 2.5rem 0;
+	padding-top: 25px;
+	padding-top: 2.5rem;
+	text-align: center;
+	
+	&:first-child {
+		border-top: none;
+		margin: 25px 0;
+		margin: 2.5rem 0;
+		padding-top: 0;
+	}
+	
+	.button2 {
+		margin: 1.5em 0 0 0;
+	}
+	
+	header {
+		
+		h1 {
+			font-family: $serif;
+			font-size: 2em;
+		}
+		
+	}
+
+	footer {}
+
+} /* end .hentry */
+
 		.single-title,
 		.page-title {}
 
@@ -285,14 +560,21 @@ POSTS & CONTENT STYLES
 
 		/* post meta */
 		.byline {
-			color: #999;
+
+			font-family: $serif;
+			font-size: 0.85em;
+			font-style: italic;
+			color: $lightestgrey;
+			font-weight: 700;
 
 			time {}
+
 		}
 
 		/* entry content */
-		.entry-content {
 
+		.entry-content {
+			
 			p {}
 
 
@@ -406,6 +688,229 @@ POSTS & CONTENT STYLES
 		.size-large {}
 		.size-medium {}
 		.size-thumbnail {}
+	
+
+/******************************************************************
+BUTTON STYLES
+******************************************************************/
+
+		
+.button_contact {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	min-width: 298px;
+	
+	img {
+		position: relative;
+	}
+	
+}		
+
+.button_blog {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+	-webkit-transform: translate(-50%, 0);
+	-o-transform: translate(-50%, 0);
+	-moz-transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	min-width: 229px;
+}		
+
+
+/******************************************************************
+FORM STYLES
+******************************************************************/
+
+form {
+	
+	input[type=text],
+	input[type=email],
+	input[type=url],
+	textarea {
+		padding: 15px 32px;
+		border: 2px solid $lightestgrey;
+		resize: none;
+		width: 100%;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-webkit-appearance: none;
+		margin: 0 0 40px 0;	
+		font-size: 19px;
+		font-weight: 400;
+		@include border-radius(10px, 10px, 10px ,10px);
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box;
+ 
+		
+		&:focus {
+			background: #fff;
+		}
+	
+		/* form validation */
+		&:invalid {
+			outline: none;
+			border-color: #fbc2c4;
+			background-color: #f6e7eb;
+			-webkit-box-shadow: none;
+			   -moz-box-shadow: none;
+			    -ms-box-shadow: none;
+					box-shadow: none;
+		}
+
+	}
+	
+}
+
+#newsletter	form {
+
+		max-width: 500px;
+		margin: 0 auto;
+
+		input[type=submit], a {
+			display: inline-block;
+			border: none;
+			font-size: 19px;
+			line-height: normal;
+			padding: 20px 32px;
+			min-width: 215px;
+			margin: 20px 0 0 0;
+			float: left;
+			clear: both;
+			position: relative;
+			left: 50%;
+			transform: translate(-50%, 0);
+			-webkit-transform: translate(-50%, 0);
+			-o-transform: translate(-50%, 0);
+			-moz-transform: translate(-50%, 0);
+			-ms-transform: translate(-50%, 0);
+			@include border-radius(10px, 10px, 10px ,10px); 
+			
+			img {
+				margin-left: 25px;
+			}
+		}
+
+		input[type=text],
+		input[type=email],
+		input[type=url],
+		textarea {
+			padding: 20px 32px;
+			background: $white;
+			border: none;
+			font-size: 19px;
+			text-align: center;
+			position: relative;
+			float: left;
+			left: 50%;
+			transform: translate(-50%, 0);
+			-webkit-transform: translate(-50%, 0);
+			-o-transform: translate(-50%, 0);
+			-moz-transform: translate(-50%, 0);
+			-ms-transform: translate(-50%, 0);
+			@include border-radius(10px, 10px, 10px ,10px); 
+			
+			&:focus {
+				background: #fff;
+			}
+
+			/* form validation */
+			&:invalid {
+				outline: none;
+				border-color: #fbc2c4;
+				background-color: #f6e7eb;
+				-webkit-box-shadow: none;
+				   -moz-box-shadow: none;
+				    -ms-box-shadow: none;
+						box-shadow: none;
+			}
+		}
+
+		input[type=text],
+		input[type=email],
+		input[type=url] {
+			max-width: 315px;
+			min-width: 250px;
+		}
+
+		textarea {
+			resize: none;
+			width: 97.3%;
+			height: 150px;
+		}
+		
+		.disclaimer {
+			font-size: 0.6em;
+			color: $lighterblue;
+			font-weight: 300;
+			text-align: center;
+			padding: 0 5%;
+			margin: 60px 0 0 0;
+		}
+		
+	}
+	
+
+#Contact form { 
+
+		input[type=text],
+		input[type=email],
+		input[type=url],
+		textarea {
+			padding: 20px 32px;
+			border: 2px solid $lightestgrey;
+			resize: none;
+			width: 100%;
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			-webkit-appearance: none;
+			margin: 0 0 40px 0;
+			@include border-radius(10px, 10px, 10px ,10px); 
+	}
+	
+	p {
+		margin: 0;
+	}
+	
+}
+
+
+form#searchform {
+
+		input[type=text],
+		textarea {
+			width: 50%;
+			margin: 0 10px 0 0;
+		}
+		
+		label {
+			display: none;
+		}
+		
+		input[type=submit] {
+			display: none;
+		}
+		
+}
+
+/******************************************************************
+SOCIAL STYLES
+******************************************************************/
+
+.social {
+	margin: 20px 0 0 0;
+	
+	.facebook {
+		margin: 20px 0 0 0;
+	}
+	
+}
 
 /******************************************************************
 PAGE NAVI STYLES
@@ -414,22 +919,24 @@ PAGE NAVI STYLES
 .page-navigation,
 .wp-prev-next {
 	margin: 1.1em 0 2.2em;
+	width: 100% ;
+	text-align: center;
 }
 	.bones_page_navi {
 
 		li {
-			float: left;
+			display: inline-block;
 			margin-left: 10px;
 
 			a {
-				padding: 3px 6px;
+				padding: 12px 24px;
 				display: block;
 				text-decoration: none;
 				position: relative;
 
 				&:hover,
 				&:focus {
-					color: #f01d4f;
+					color: $link-hover;
 					text-decoration: underline;
 				}
 			}
@@ -438,8 +945,8 @@ PAGE NAVI STYLES
 
 		/* current page link */
 		li.bpn-current {
-			padding: 3px 6px;
-			border-bottom: 2px solid #f01d4f;
+			padding: 12px 24px;
+			border-bottom: 2px solid $lightestgrey;
 			position: relative;
 
 			a {
@@ -457,7 +964,7 @@ PAGE NAVI STYLES
 			font-weight: 700;
 
 			a {
-				padding: 0;
+				padding: 12px 24px;
 			}
 		}
 
@@ -791,7 +1298,9 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 
-.sidebar {}
+.sidebar {
+	margin-top: 2.2em;
+}
 
 	.widgettitle {}
 
@@ -816,12 +1325,19 @@ SIDEBARS & ASIDES
 
 	}
 
+#sidebartop {
+	text-align: center;
+	position: relative;
+}
+
 /*********************
 FOOTER STYLES
 *********************/
 
 .footer {
 	clear: both;
+	min-height: 40px;
+	padding: 20px 0;
 }
 
 	/*

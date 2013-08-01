@@ -18,8 +18,8 @@ import the mixins file so SASS can understand the variables.
 */
 /* import mixins */
 /******************************************************************
-Site Name:
-Author:
+Site Name: Freek Rooze
+Author:	Tim de Groot
 
 Stylesheet: Mixins & Constants Stylesheet
 
@@ -153,46 +153,74 @@ probably best not to use it. I mean, were you going to anyway? */
 /*********************
 BUTTONS
 *********************/
-.button, .button:visited {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  border: 1px solid #be0d37;
-  border-top-color: #db0f3f;
-  border-left-color: #db0f3f;
-  padding: 4px 12px;
+.button, .button:visited, input[type=submit] {
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 17px 32px;
   color: white;
   display: inline-block;
-  font-size: 11px;
-  font-weight: bold;
+  font-size: 19px;
+  font-weight: 400;
   text-decoration: none;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
   cursor: pointer;
-  margin-bottom: 20px;
-  line-height: 21px;
-  border-radius: 4px;
-  background-color: #e40f42;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f01d4f), to(#e40f42));
-  background-image: -webkit-linear-gradient(top, #f01d4f, #e40f42);
-  background-image: -moz-linear-gradient(top, #f01d4f, #e40f42);
-  background-image: -o-linear-gradient(top, #f01d4f, #e40f42);
-  background-image: linear-gradient(to bottom, #f01d4f, #e40f42); }
-  .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
+  margin-bottom: 0px;
+  border-radius: 10px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: #ff6e00;
+  border: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  .button img, .button:visited img, input[type=submit] img {
+    margin-left: 25px;
+    position: absolute;
+    -webkit-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+  .button:hover img, .button:visited:hover img, input[type=submit]:hover img {
+    transform: translate(3px, 0);
+    -webkit-transform: translate(3px, 0);
+    -moz-transform: translate(3px, 0);
+    -o-transform: translate(3px, 0);
+    -ms-transform: translate(3px, 0); }
+  .button:hover, .button:focus, .button:visited:hover, .button:visited:focus, input[type=submit]:hover, input[type=submit]:focus {
     color: white;
-    border: 1px solid #be0d37;
-    border-top-color: #9d0a2d;
-    border-left-color: #9d0a2d;
-    background-color: #cc0e3b;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#e40f42), to(#cc0e3b));
-    background-image: -webkit-linear-gradient(top, #e40f42, #cc0e3b);
-    background-image: -moz-linear-gradient(top, #e40f42, #cc0e3b);
-    background-image: -o-linear-gradient(top, #e40f42, #cc0e3b);
-    background-image: linear-gradient(to bottom, #e40f42, #cc0e3b); }
-  .button:active, .button:visited:active {
-    background-color: #f01d4f;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#e40f42), to(#f01d4f));
-    background-image: -webkit-linear-gradient(top, #e40f42, #f01d4f);
-    background-image: -moz-linear-gradient(top, #e40f42, #f01d4f);
-    background-image: -o-linear-gradient(top, #e40f42, #f01d4f);
-    background-image: linear-gradient(to bottom, #e40f42, #f01d4f); }
+    background-color: #ff8b33; }
+  .button:active, .button:visited:active, input[type=submit]:active {
+    background-color: #ff6e00; }
+
+.button2, .button2:visited {
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 10px 40px;
+  color: #ff6e00;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: transparent;
+  border: 2px solid #ff6e00;
+  -webkit-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  .button2:hover, .button2:focus, .button2:visited:hover, .button2:visited:focus {
+    color: white;
+    background-color: #ff6e00;
+    border: 2px solid transparent; }
+  .button2:active, .button2:visited:active {
+    background-color: #ff8b33; }
 
 .blue-button, .blue-button:visited {
   border-color: #1472ad;
@@ -224,8 +252,8 @@ BUTTONS
 Border Radius
 *********************/
 /******************************************************************
-Site Name:
-Author:
+Site Name: Freek Rooze
+Author:	Tim de Groot
 
 Stylesheet: Grid Stylesheet
 
@@ -258,7 +286,7 @@ values are commented out on each line.
 
 /* 22.05%; } /* grid_3  */
 .fourcol {
-  width: 31.491712705%; }
+  width: 33.491712705%; }
 
 /* 30.75%; } /* grid_4  */
 .fivecol {
@@ -296,17 +324,17 @@ values are commented out on each line.
 .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
   position: relative;
   float: left;
-  margin-left: 2.762430939%; }
+  padding-left: 2.762430939%; }
 
 .first {
-  margin-left: 0; }
+  padding-left: 0; }
 
 .last {
   float: right; }
 
 /******************************************************************
-Site Name: 
-Author: 
+Site Name: Freek Rooze
+Author:	Tim de Groot
 
 Stylesheet: 481px and Up Stylesheet
 
@@ -342,6 +370,20 @@ NAVIGATION STYLES
 
 /* end .menu */
 /*********************
+HEADER STYLES
+*********************/
+#pageheader .featurecontent {
+  height: 410px; }
+  #pageheader .featurecontent .h1 {
+    top: 30px;
+    left: 10%; }
+    #pageheader .featurecontent .h1 h1 {
+      font-size: 1.2em;
+      font-weight: 300; }
+    #pageheader .featurecontent .h1 img {
+      width: 153px; }
+
+/*********************
 POSTS & CONTENT STYLES
 *********************/
 /* entry content */
@@ -371,8 +413,8 @@ do they need tweaking?
 */
 /* end .footer-links */
 /******************************************************************
-Site Name:
-Author:
+Site Name: Freek Rooze
+Author:	Tim de Groot
 
 Stylesheet: Tablet & Small Desktop Stylesheet
 
@@ -390,55 +432,91 @@ GENERAL STYLES
 LAYOUT & GRID STYLES
 *********************/
 .wrap {
-  max-width: 1140px; }
+  max-width: 960px; }
+
+.sixcol.coaching-intro {
+  margin: 0; }
+
+.sixcol.coaching-intro {
+  text-align: center;
+  padding: 0px 53px;
+  margin: 0 0 4em 0; }
+
+.section_title p {
+  padding: 0 20%;
+  text-align: center;
+  font-size: 1.15em;
+  font-weight: 400;
+  color: #9a9fa2;
+  margin: 0 0 3.5em 0; }
 
 /*********************
 HEADER STYLES
 *********************/
-.pageheader {
-  overflow: hidden;
-  height: 410px; }
-  .pageheader .featurecontent {
-    max-width: 960px;
-    height: 410px;
-    background-image: url("/library/img/img_feature.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -moz-border-radius: 10px 10px 0 0;
-    -webkit-border-top-left-radius: 10px;
-    -webkit-border-top-right-radius: 10px;
+.header #inner-header #logo {
+  margin: 18px 0 0 30px; }
+
+.featurecontent {
+  height: 410px;
+  margin: 0 auto;
+  background-image: url("/wp-content/themes/FR/library/images/img_feature@2x.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  border-radius: 5px 5px 0 0; }
+  .featurecontent img {
+    max-width: 100%;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
     -webkit-border-bottom-right-radius: 0;
     -webkit-border-bottom-left-radius: 0;
-    border-radius: 10px 10px 0 0; }
+    border-radius: 5px 5px 0 0; }
+
+#pageheader .featurecontent .h1 h1 {
+  font-size: 1.3em; }
 
 /*********************
 NAVIGATION STYLES
 *********************/
-.nav {
+#pull {
+  display: none; }
+
+nav {
   background: transparent;
   border: 0;
   float: right;
+  width: auto;
   /* end .menu ul li */
   /* highlight current page */
   /* end current highlighters */ }
-  .nav li {
-    float: left;
-    position: relative;
+  nav ul#menu-global {
+    margin-top: 21px;
+    display: block;
     /*
     plan your menus and drop-downs wisely.
     */
     /* showing sub-menus */ }
-    .nav li a {
-      border-bottom: 0;
-      /*
-      you can use hover styles here even though this size
-      has the possibility of being a mobile device.
-      */ }
-      .nav li a:hover, .nav li a:focus {
-        background-color: transparent; }
-    .nav li ul.sub-menu,
-    .nav li ul.children {
+    nav ul#menu-global li {
+      float: left;
+      position: relative; }
+      nav ul#menu-global li a, nav ul#menu-global li a:visited, nav ul#menu-global li a:active {
+        border-bottom: 0;
+        padding: 10px 10px;
+        font-size: 14px;
+        /*
+        you can use hover styles here even though this size
+        has the possibility of being a mobile device.
+        */ }
+        nav ul#menu-global li a:hover, nav ul#menu-global li a:focus, nav ul#menu-global li a:visited:hover, nav ul#menu-global li a:visited:focus, nav ul#menu-global li a:active:hover, nav ul#menu-global li a:active:focus {
+          background-color: transparent; }
+    nav ul#menu-global ul.sub-menu,
+    nav ul#menu-global ul.children {
       margin-top: 0;
       border: 1px solid #ccc;
       border-top: 0;
@@ -446,36 +524,113 @@ NAVIGATION STYLES
       display: none;
       z-index: 8999;
       /* highlight sub-menu current page */ }
-      .nav li ul.sub-menu li,
-      .nav li ul.children li {
+      nav ul#menu-global ul.sub-menu li,
+      nav ul#menu-global ul.children li {
         /*
         if you need to go deeper, go nuts
         just remember deeper menus suck
         for usability. k, bai.
         */ }
-        .nav li ul.sub-menu li a,
-        .nav li ul.children li a {
+        nav ul#menu-global ul.sub-menu li a,
+        nav ul#menu-global ul.children li a {
           padding-left: 10px;
           border-right: 0;
           display: block;
           width: 180px;
           border-bottom: 1px solid #ccc; }
-        .nav li ul.sub-menu li:last-child a,
-        .nav li ul.children li:last-child a {
+        nav ul#menu-global ul.sub-menu li:last-child a,
+        nav ul#menu-global ul.children li:last-child a {
           border-bottom: 0; }
-    .nav li:hover ul {
+    nav ul#menu-global:hover ul {
       top: auto;
       display: block; }
 
 /* end .nav */
+/******************************************************************
+NEWSLETTER FORM STYLES
+******************************************************************/
+#newsletter form {
+  max-width: 500px;
+  margin: 0 auto; }
+  #newsletter form input[type=submit], #newsletter form a {
+    display: inline-block;
+    border: none;
+    font-size: 19px;
+    line-height: normal;
+    padding: 20px 32px;
+    min-width: 215px;
+    float: none;
+    margin: 0;
+    position: static;
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -moz-border-radius: 0 10px 10px 0;
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 0;
+    border-radius: 0 10px 10px 0; }
+    #newsletter form input[type=submit] img, #newsletter form a img {
+      margin-left: 20px; }
+  #newsletter form input[type=text],
+  #newsletter form input[type=email],
+  #newsletter form input[type=url],
+  #newsletter form textarea {
+    padding: 20px 32px;
+    background: white;
+    border: none;
+    font-size: 19px;
+    text-align: left;
+    position: static;
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -moz-border-radius: 10px 0 0 10px;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 10px;
+    border-radius: 10px 0 0 10px;
+    /* form validation */ }
+    #newsletter form input[type=text]:focus,
+    #newsletter form input[type=email]:focus,
+    #newsletter form input[type=url]:focus,
+    #newsletter form textarea:focus {
+      background: #fff; }
+    #newsletter form input[type=text]:invalid,
+    #newsletter form input[type=email]:invalid,
+    #newsletter form input[type=url]:invalid,
+    #newsletter form textarea:invalid {
+      outline: none;
+      border-color: #fbc2c4;
+      background-color: #f6e7eb;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      -ms-box-shadow: none;
+      box-shadow: none; }
+  #newsletter form input[type=text],
+  #newsletter form input[type=email],
+  #newsletter form input[type=url] {
+    max-width: 285px;
+    min-width: 250px; }
+  #newsletter form textarea {
+    resize: none;
+    width: 97.3%;
+    height: 150px; }
+
+#Contact .social {
+  padding-left: 20%; }
+
 /*********************
 SIDEBARS & ASIDES
 *********************/
-.sidebar {
-  margin-top: 2.2em; }
-
 .widgettitle {
-  border-bottom: 2px solid #444;
+  border-bottom: none;
   margin-bottom: 0.75em; }
 
 .widget {

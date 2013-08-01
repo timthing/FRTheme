@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name: 
-Author: 
+Site Name: Freek Rooze
+Author:	Tim de Groot
 
 Stylesheet: 481px and Up Stylesheet
 
@@ -15,13 +15,11 @@ upon your base.scss styles.
 
 ******************************************************************/
 
-
-	
 /*********************
 NAVIGATION STYLES
 *********************/
 
-.nav {}
+nav {}
 
 	/* .menu is clearfixed inside mixins.scss */
 	.menu {
@@ -68,6 +66,36 @@ NAVIGATION STYLES
 	} /* end .menu */
 
 /*********************
+HEADER STYLES
+*********************/
+
+
+		#pageheader{
+		
+			.featurecontent {
+				height: 410px;
+				
+				.h1 {
+					top: 30px;
+					left: 10%;
+					
+					h1 {
+						font-size: 1.2em;
+						font-weight: 300;
+					}
+					
+					img {
+						width: 153px;
+					}
+				}
+				
+			}
+			
+		}
+
+
+
+/*********************
 POSTS & CONTENT STYLES
 *********************/
 
@@ -95,6 +123,7 @@ POSTS & CONTENT STYLES
 			
 } /* end .entry-content */
 
+
 /*********************
 FOOTER STYLES
 *********************/
@@ -108,4 +137,7 @@ do they need tweaking?
 		li {}
 	}
 } /* end .footer-links */
-			
+
+
+
+

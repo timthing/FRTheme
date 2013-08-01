@@ -4,9 +4,8 @@
 
 					<nav role="navigation">
 							<?php bones_footer_links(); ?>
-									</nav>
-
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
+					</nav>
+					<!-- <p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p> -->
 
 				</div> <!-- end #inner-footer -->
 

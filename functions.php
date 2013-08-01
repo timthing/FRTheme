@@ -80,8 +80,16 @@ function bones_register_sidebars() {
 		'description' => __('The first (primary) sidebar.', 'bonestheme'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_title' => '<h3 class="widgettitle">',
+		'after_title' => '</h3>',
+	));
+	register_sidebar(array(
+		'id' => 'sidebartop',
+		'name' => __('SidebarTop', 'bonestheme'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
 	));
 
 	/*
@@ -160,6 +168,10 @@ function bones_wpsearch($form) {
 	</form>';
 	return $form;
 } // don't remove this bracket!
+
+
+/************* ADD FIRST LAST CLASSES TO BLOGROLL *****************/
+
 
 
 ?>

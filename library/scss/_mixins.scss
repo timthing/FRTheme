@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: Freek Rooze
+Author:	Tim de Groot
 
 Stylesheet: Mixins & Constants Stylesheet
 
@@ -53,8 +53,14 @@ http://0to255.com/
 
 $darkgrey:			#383D40;
 $lightgrey:			#9A9FA2;
+$lightergrey:		#9B9B9B;
+$lightestgrey:		#DBDBDB;
 $lightblue:			#F5FAFF;
+$lighterblue:		#ADD2FF;
 $darkblue:			#005FD4;
+
+$orange:			#FF6E00;
+$orange_dark:		darken($orange, 10%);
 
 $alert-yellow:      #ebe16f;
 $alert-red:         #fbe3e4;
@@ -67,14 +73,21 @@ $white:             #fff;
 $bones-pink:        #f01d4f;
 $bones-blue:        #1990db;
 
-$link-color:        $bones-pink;
-$link-hover:        darken($link-color, 9%);
+$link-color:        $darkblue;
+$link-color-nav:	$lightgrey;
+$link-hover-nav:	$lightblue;
+$link-hover:        darken($link-color, 15%);
 
 
-$body_background_color: $lightblue;
-$main_background_color: $white;
-$header_background_color: $darkgrey;
-$section_background_color: $darkblue;
+$text_color:				$lightergrey;
+
+$body_background_color: 	$lightblue;
+$main_background_color: 	$white;
+$header_background_color: 	$darkgrey;
+$section_background_color: 	$darkblue;
+
+$button-color:			$orange;
+$button-color-hover:	lighten($button-color, 10%);
 
 
 /*
@@ -94,8 +107,9 @@ $main_padding: 0 10px;
 TYPOGRAPHY
 *********************/
 
-$sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+$sans-serif:        	"proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans-serif-headers:    "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif:             	"Adelle", "Georgia", Cambria, Times New Roman, Times, serif;
 
 
 /* 	To embed your own fonts, use this syntax
@@ -220,37 +234,77 @@ probably best not to use it. I mean, were you going to anyway? */
 BUTTONS
 *********************/
 
-.button, .button:visited {
+.button, .button:visited, input[type=submit] {
 	font-family: $sans-serif;
-	border: 1px solid darken($link-color, 13%);
-	border-top-color: darken($link-color, 7%);
-	border-left-color: darken($link-color, 7%);
-	padding: 4px 12px;
+	padding: 17px 32px;
 	color: $white;
 	display: inline-block;
-	font-size: 11px;
-	font-weight: bold;
+	font-size: 19px;
+	font-weight: 400;
 	text-decoration: none;
-	text-shadow: 0 1px rgba(0,0,0, .75);
 	cursor: pointer;
-	margin-bottom: 20px;
-	line-height: 21px;
-	border-radius: 4px;
-	@include css-gradient($link-color, darken($link-color, 5%));
-
+	margin-bottom: 0px;
+	border-radius: 10px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	background-color: $button-color;
+	border: none;
+	@include transition(all 0.2s ease-in-out);
+		
+	img {
+		margin-left: 25px;
+		position: absolute;
+		@include transition(all 0.2s ease-in-out);
+	}
+	
+	&:hover img {
+		transform: translate(3px, 0);
+		-webkit-transform: translate(3px, 0);
+		-moz-transform: translate(3px, 0);
+		-o-transform: translate(3px, 0);
+		-ms-transform: translate(3px, 0);
+	}		
 
 	&:hover, &:focus {
 		color: $white;
-	  	border: 1px solid darken($link-color, 13%);
-	  	border-top-color: darken($link-color, 20%);
-	 	border-left-color: darken($link-color, 20%);
-		@include css-gradient(darken($link-color, 5%), darken($link-color, 10%));
+		background-color: $button-color-hover;
 	}
 
 	&:active {
-		@include css-gradient(darken($link-color, 5%), $link-color);
+		background-color: $button-color;
 	}
 }
+
+.button2, .button2:visited {
+	font-family: $sans-serif;
+	padding: 10px 40px;
+	color: $orange;
+	display: inline-block;
+	font-size: 15px;
+	font-weight: 700;
+	text-decoration: none;
+	cursor: pointer;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	background-color: transparent;
+	border: 2px solid $orange;
+	@include transition(all 0.2s ease-in-out);
+
+	&:hover, &:focus {
+		color: $white;
+		background-color: $button-color;
+		border: 2px solid transparent;
+	}
+
+	&:active {
+		background-color: $button-color-hover;
+	}
+}
+
 
 .blue-button, .blue-button:visited {
 	border-color: darken($bones-blue, 10%);
@@ -271,7 +325,7 @@ BUTTONS
 /*********************
 Border Radius
 *********************/
-@mixin border_radius($tl: 5px, $tr: 5px, $br: 5px, $bl: 5px) {
+@mixin border-radius($tl: 5px, $tr: 5px, $br: 5px, $bl: 5px) {
   -moz-border-radius: $tl $tr $br $bl;
   -webkit-border-top-left-radius: $tl;
   -webkit-border-top-right-radius: $tr;

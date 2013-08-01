@@ -1,8 +1,8 @@
-				<div id="sidebar1" class="sidebar fourcol last content-wrap clearfix" role="complementary">
+				<div id="sidebartop" class="center content-wrap clearfix" role="complementary">
 
-					<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
+					<?php if ( is_active_sidebar( 'sidebartop' ) ) : ?>
 
-						<?php dynamic_sidebar( 'sidebar1' ); ?>
+						<?php dynamic_sidebar( 'sidebartop' ); ?>
 
 					<?php else : ?>
 

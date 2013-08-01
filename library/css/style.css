@@ -469,8 +469,8 @@ dd {
   list-style: none; }
 
 /******************************************************************
-Site Name:
-Author:
+Site Name: Freek Rooze
+Author:	Tim de Groot
 
 Stylesheet: Mixins & Constants Stylesheet
 
@@ -604,46 +604,74 @@ probably best not to use it. I mean, were you going to anyway? */
 /*********************
 BUTTONS
 *********************/
-.button, .button:visited {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  border: 1px solid #be0d37;
-  border-top-color: #db0f3f;
-  border-left-color: #db0f3f;
-  padding: 4px 12px;
+.button, .button:visited, input[type=submit] {
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 17px 32px;
   color: white;
   display: inline-block;
-  font-size: 11px;
-  font-weight: bold;
+  font-size: 19px;
+  font-weight: 400;
   text-decoration: none;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
   cursor: pointer;
-  margin-bottom: 20px;
-  line-height: 21px;
-  border-radius: 4px;
-  background-color: #e40f42;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f01d4f), to(#e40f42));
-  background-image: -webkit-linear-gradient(top, #f01d4f, #e40f42);
-  background-image: -moz-linear-gradient(top, #f01d4f, #e40f42);
-  background-image: -o-linear-gradient(top, #f01d4f, #e40f42);
-  background-image: linear-gradient(to bottom, #f01d4f, #e40f42); }
-  .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
+  margin-bottom: 0px;
+  border-radius: 10px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: #ff6e00;
+  border: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  .button img, .button:visited img, input[type=submit] img {
+    margin-left: 25px;
+    position: absolute;
+    -webkit-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+  .button:hover img, .button:visited:hover img, input[type=submit]:hover img {
+    transform: translate(3px, 0);
+    -webkit-transform: translate(3px, 0);
+    -moz-transform: translate(3px, 0);
+    -o-transform: translate(3px, 0);
+    -ms-transform: translate(3px, 0); }
+  .button:hover, .button:focus, .button:visited:hover, .button:visited:focus, input[type=submit]:hover, input[type=submit]:focus {
     color: white;
-    border: 1px solid #be0d37;
-    border-top-color: #9d0a2d;
-    border-left-color: #9d0a2d;
-    background-color: #cc0e3b;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#e40f42), to(#cc0e3b));
-    background-image: -webkit-linear-gradient(top, #e40f42, #cc0e3b);
-    background-image: -moz-linear-gradient(top, #e40f42, #cc0e3b);
-    background-image: -o-linear-gradient(top, #e40f42, #cc0e3b);
-    background-image: linear-gradient(to bottom, #e40f42, #cc0e3b); }
-  .button:active, .button:visited:active {
-    background-color: #f01d4f;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#e40f42), to(#f01d4f));
-    background-image: -webkit-linear-gradient(top, #e40f42, #f01d4f);
-    background-image: -moz-linear-gradient(top, #e40f42, #f01d4f);
-    background-image: -o-linear-gradient(top, #e40f42, #f01d4f);
-    background-image: linear-gradient(to bottom, #e40f42, #f01d4f); }
+    background-color: #ff8b33; }
+  .button:active, .button:visited:active, input[type=submit]:active {
+    background-color: #ff6e00; }
+
+.button2, .button2:visited {
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 10px 40px;
+  color: #ff6e00;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: transparent;
+  border: 2px solid #ff6e00;
+  -webkit-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  .button2:hover, .button2:focus, .button2:visited:hover, .button2:visited:focus {
+    color: white;
+    background-color: #ff6e00;
+    border: 2px solid transparent; }
+  .button2:active, .button2:visited:active {
+    background-color: #ff8b33; }
 
 .blue-button, .blue-button:visited {
   border-color: #1472ad;
@@ -681,8 +709,8 @@ you set a great foundation, you won't need to add too many styles in
 the other stylesheets. Remember, keep it light: Speed is Important.
 */
 /******************************************************************
-Site Name:
-Author:
+Site Name: Freek Rooze
+Author:	Tim de Groot
 
 Stylesheet: Base Mobile Stylesheet
 
@@ -696,11 +724,12 @@ and will be used across all viewports.
 GENERAL STYLES
 *********************/
 body {
-  font-family: "Georgia", Cambria, Times New Roman, Times, serif;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
-  color: #565656;
-  background-color: #f5faff; }
+  color: #9b9b9b;
+  background-color: #f5faff;
+  -webkit-font-smoothing: antialiased; }
 
 /********************
 WORDPRESS BODY CLASSES
@@ -748,20 +777,53 @@ LAYOUT & GRID STYLES
   width: 96%;
   margin: 0 auto; }
 
-#main {
+.content-wrap {
+  padding: 0 6%; }
+
+section {
+  zoom: 1; }
+  section:before, section:after {
+    content: "";
+    display: table; }
+  section:after {
+    clear: both; }
+
+#inner-content {
   background-color: white;
-  padding: 0 10px; }
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-radius: 0 0 5px 5px; }
+  #inner-content section {
+    padding: 95px 0; }
+  #inner-content section.no-padding {
+    padding: 0; }
+  #inner-content section.entry-content {
+    padding: 0; }
+
+.sixcol.coaching-intro {
+  text-align: center;
+  padding: 0px 4%;
+  margin: 0 0 4em 0; }
+
+.section-blue {
+  background-color: #005fd4; }
 
 /*********************
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #f01d4f;
+  color: #005fd4;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #d10e3c; }
+    color: #003d88;
+    text-decoration: none; }
   a:link, a:visited:link {
     /*
     this highlights links on iPhones/iPads.
@@ -770,13 +832,23 @@ a, a:visited {
     */
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
+#Contact a, #Contact a:visited {
+  color: #9b9b9b;
+  text-decoration: none;
+  /* on hover */
+  /* on click */ }
+  #Contact a:hover, #Contact a:focus, #Contact a:visited:hover, #Contact a:visited:focus {
+    color: #005fd4;
+    text-decoration: none; }
+
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
-  font-weight: 500;
+  font-weight: 300;
+  color: #383d40;
   /*
   if you're going to use webfonts, be sure to check your weights
   http://css-tricks.com/watch-your-font-weight/
@@ -787,15 +859,21 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 
 h1, .h1 {
   font-size: 2.5em;
-  line-height: 1.333em; }
+  line-height: 1.333em;
+  margin: 0.3em 0; }
 
 h2, .h2 {
-  font-size: 1.75em;
+  font-size: 2.4em;
   line-height: 1.4em;
-  margin-bottom: 0.375em; }
+  font-weight: 300;
+  margin: 0 0 0.375em 0;
+  width: 100%;
+  text-align: center; }
 
 h3, .h3 {
-  font-size: 1.125em; }
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.4em;
+  font-weight: 400; }
 
 h4, .h4 {
   font-size: 1.1em;
@@ -808,14 +886,86 @@ h5, .h5 {
   letter-spacing: 2px; }
 
 /*********************
+BASIC STYLES
+*********************/
+img {
+  vertical-align: middle; }
+
+hr {
+  border: 1px solid #dbdbdb; }
+
+.section-blue hr {
+  border: 1px solid #add2ff; }
+
+/*********************
 HEADER STYLES
 *********************/
 .header {
-  background-color: #383d40; }
+  background-color: #383d40;
+  height: 84px; }
+  .header #inner-header {
+    background-color: #383d40;
+    position: fixed;
+    margin-bottom: 0px;
+    z-index: 100;
+    overflow: visible;
+    right: 0;
+    left: 0;
+    top: 0;
+    opacity: 0.95;
+    height: auto;
+    min-height: 84px;
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    border-radius: 0 0 5px 5px; }
+    .header #inner-header #logo {
+      float: left;
+      margin: 18px 0 0 20px;
+      width: 49px; }
+      .header #inner-header #logo img {
+        width: 100%; }
 
-#logo {
-  float: left;
-  padding: 0 10px; }
+#pageheader {
+  overflow: hidden;
+  width: 100%;
+  background-color: #383d40; }
+  #pageheader .featurecontent {
+    position: relative;
+    height: 300px;
+    margin: 0 auto;
+    background-image: url("/wp-content/themes/FR/library/images/img_feature.jpg");
+    background-position: 54% center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    border-radius: 5px 5px 0 0; }
+    #pageheader .featurecontent img {
+      max-width: 100%;
+      -moz-border-radius: 5px 5px 0 0;
+      -webkit-border-top-left-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
+      -webkit-border-bottom-right-radius: 0;
+      -webkit-border-bottom-left-radius: 0;
+      border-radius: 5px 5px 0 0; }
+    #pageheader .featurecontent .h1 {
+      position: absolute;
+      top: 20px;
+      left: 8%; }
+      #pageheader .featurecontent .h1 h1 {
+        color: #ffffff;
+        font-size: 0.85em;
+        font-weight: 400;
+        max-width: 60%;
+        min-width: 245px; }
+      #pageheader .featurecontent .h1 img {
+        width: 153px; }
 
 /*********************
 NAVIGATION STYLES
@@ -827,13 +977,19 @@ easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
 */
-.nav {
-  border: 1px solid #ccc;
+nav {
+  border: 0;
   border-bottom: 0;
+  overflow: hidden;
+  width: 100%;
   /* end .menu li */
   /* highlight current page */
   /* end current highlighters */ }
-  .nav li {
+  nav ul#menu-global {
+    margin-top: 10px;
+    float: none;
+    width: 100%;
+    display: none;
     /*
     so you really have to rethink your dropdowns for mobile.
     you don't want to have it expand too much because the
@@ -841,28 +997,116 @@ and more scalable.
     depend on the project. Here's some great info on it:
     http://www.alistapart.com/articles/organizing-mobile/
     */ }
-    .nav li a {
+    nav ul#menu-global li a, nav ul#menu-global li a:visited, nav ul#menu-global li a:active {
       display: block;
       text-decoration: none;
-      padding: 10px 10px;
+      padding: 10px 20px;
       background-color: transparent;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 0;
+      color: #9a9fa2;
+      font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      -webkit-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      -transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
       /*
       remember this is for mobile ONLY, so there's no need
       to even declare hover styles here, you can do it in
       the style.scss file where it's relevant. We want to
       keep this file as small as possible!
       */ }
-    .nav li ul.sub-menu li a,
-    .nav li ul.children li a {
+      nav ul#menu-global li a:hover, nav ul#menu-global li a:focus, nav ul#menu-global li a:visited:hover, nav ul#menu-global li a:visited:focus, nav ul#menu-global li a:active:hover, nav ul#menu-global li a:active:focus {
+        color: #f5faff; }
+    nav ul#menu-global ul.sub-menu li a,
+    nav ul#menu-global ul.children li a {
       padding-left: 30px; }
 
 /* end .nav */
+#pull {
+  display: block;
+  position: absolute;
+  top: 27px;
+  right: 20px;
+  width: 40px; }
+  #pull img {
+    width: 100%; }
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 #content {
-  margin-top: 0; }
+  margin-top: 0px; }
+
+.section_title p {
+  padding: 0 4%;
+  text-align: center;
+  font-size: 1.15em;
+  font-weight: 400;
+  color: #9a9fa2;
+  margin: 0 0 3.5em 0; }
+
+.coaching-intro p {
+  margin: 1em 0 2em 0; }
+
+.section-blue .section_title h2 {
+  color: white; }
+.section-blue .section_title p {
+  color: #add2ff; }
+.section-blue ul {
+  width: 75%;
+  margin: 0 auto 95px auto;
+  /*border: 1px solid $lighterblue;*/
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-radius: 5px 5px 5px 5px; }
+  .section-blue ul li {
+    color: white;
+    font-family: "Adelle", "Georgia", Cambria, Times New Roman, Times, serif;
+    font-size: 1.4em;
+    font-weight: 400;
+    margin: 40px 0; }
+    .section-blue ul li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 40px;
+      border: 2px solid #add2ff;
+      -webkit-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      -transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      -moz-border-radius: 5px 5px 5px 5px;
+      -webkit-border-top-left-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
+      -webkit-border-bottom-right-radius: 5px;
+      -webkit-border-bottom-left-radius: 5px;
+      border-radius: 5px 5px 5px 5px; }
+      .section-blue ul li a:hover {
+        color: #add2ff; }
+
+.hentry {
+  border-top: 1px solid #dbdbdb;
+  margin: 25px 0;
+  margin: 2.5rem 0;
+  padding-top: 25px;
+  padding-top: 2.5rem;
+  text-align: center; }
+  .hentry:first-child {
+    border-top: none;
+    margin: 25px 0;
+    margin: 2.5rem 0;
+    padding-top: 0; }
+  .hentry .button2 {
+    margin: 1.5em 0 0 0; }
+  .hentry header h1 {
+    font-family: "Adelle", "Georgia", Cambria, Times New Roman, Times, serif;
+    font-size: 2em; }
 
 /* end .hentry */
 /* want to style individual post classes? Booya! */
@@ -876,7 +1120,11 @@ POSTS & CONTENT STYLES
 /* style by tag (i.e. tag-news) */
 /* post meta */
 .byline {
-  color: #999; }
+  font-family: "Adelle", "Georgia", Cambria, Times New Roman, Times, serif;
+  font-size: 0.85em;
+  font-style: italic;
+  color: #dbdbdb;
+  font-weight: 700; }
 
 /* entry content */
 .entry-content {
@@ -923,11 +1171,205 @@ POSTS & CONTENT STYLES
 /* end .gallery */
 /* gallery caption styles */
 /******************************************************************
+BUTTON STYLES
+******************************************************************/
+.button_contact {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  min-width: 298px; }
+  .button_contact img {
+    position: relative; }
+
+.button_blog {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  min-width: 229px; }
+
+/******************************************************************
+FORM STYLES
+******************************************************************/
+form input[type=text],
+form input[type=email],
+form input[type=url],
+form textarea {
+  padding: 15px 32px;
+  border: 2px solid #dbdbdb;
+  resize: none;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-appearance: none;
+  margin: 0 0 40px 0;
+  font-size: 19px;
+  font-weight: 400;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  border-radius: 10px 10px 10px 10px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  /* form validation */ }
+  form input[type=text]:focus,
+  form input[type=email]:focus,
+  form input[type=url]:focus,
+  form textarea:focus {
+    background: #fff; }
+  form input[type=text]:invalid,
+  form input[type=email]:invalid,
+  form input[type=url]:invalid,
+  form textarea:invalid {
+    outline: none;
+    border-color: #fbc2c4;
+    background-color: #f6e7eb;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    box-shadow: none; }
+
+#newsletter form {
+  max-width: 500px;
+  margin: 0 auto; }
+  #newsletter form input[type=submit], #newsletter form a {
+    display: inline-block;
+    border: none;
+    font-size: 19px;
+    line-height: normal;
+    padding: 20px 32px;
+    min-width: 215px;
+    margin: 20px 0 0 0;
+    float: left;
+    clear: both;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    border-radius: 10px 10px 10px 10px; }
+    #newsletter form input[type=submit] img, #newsletter form a img {
+      margin-left: 25px; }
+  #newsletter form input[type=text],
+  #newsletter form input[type=email],
+  #newsletter form input[type=url],
+  #newsletter form textarea {
+    padding: 20px 32px;
+    background: white;
+    border: none;
+    font-size: 19px;
+    text-align: center;
+    position: relative;
+    float: left;
+    left: 50%;
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    border-radius: 10px 10px 10px 10px;
+    /* form validation */ }
+    #newsletter form input[type=text]:focus,
+    #newsletter form input[type=email]:focus,
+    #newsletter form input[type=url]:focus,
+    #newsletter form textarea:focus {
+      background: #fff; }
+    #newsletter form input[type=text]:invalid,
+    #newsletter form input[type=email]:invalid,
+    #newsletter form input[type=url]:invalid,
+    #newsletter form textarea:invalid {
+      outline: none;
+      border-color: #fbc2c4;
+      background-color: #f6e7eb;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      -ms-box-shadow: none;
+      box-shadow: none; }
+  #newsletter form input[type=text],
+  #newsletter form input[type=email],
+  #newsletter form input[type=url] {
+    max-width: 315px;
+    min-width: 250px; }
+  #newsletter form textarea {
+    resize: none;
+    width: 97.3%;
+    height: 150px; }
+  #newsletter form .disclaimer {
+    font-size: 0.6em;
+    color: #add2ff;
+    font-weight: 300;
+    text-align: center;
+    padding: 0 5%;
+    margin: 60px 0 0 0; }
+
+#Contact form input[type=text],
+#Contact form input[type=email],
+#Contact form input[type=url],
+#Contact form textarea {
+  padding: 20px 32px;
+  border: 2px solid #dbdbdb;
+  resize: none;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-appearance: none;
+  margin: 0 0 40px 0;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  border-radius: 10px 10px 10px 10px; }
+#Contact form p {
+  margin: 0; }
+
+form#searchform input[type=text],
+form#searchform textarea {
+  width: 50%;
+  margin: 0 10px 0 0; }
+form#searchform label {
+  display: none; }
+form#searchform input[type=submit] {
+  display: none; }
+
+/******************************************************************
+SOCIAL STYLES
+******************************************************************/
+.social {
+  margin: 20px 0 0 0; }
+  .social .facebook {
+    margin: 20px 0 0 0; }
+
+/******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
 .page-navigation,
 .wp-prev-next {
-  margin: 1.1em 0 2.2em; }
+  margin: 1.1em 0 2.2em;
+  width: 100%;
+  text-align: center; }
 
 .bones_page_navi {
   /* current page link */
@@ -939,19 +1381,19 @@ PAGE NAVI STYLES
   /* first page link */
   /* last page link */ }
   .bones_page_navi li {
-    float: left;
+    display: inline-block;
     margin-left: 10px; }
     .bones_page_navi li a {
-      padding: 3px 6px;
+      padding: 12px 24px;
       display: block;
       text-decoration: none;
       position: relative; }
       .bones_page_navi li a:hover, .bones_page_navi li a:focus {
-        color: #f01d4f;
+        color: #003d88;
         text-decoration: underline; }
   .bones_page_navi li.bpn-current {
-    padding: 3px 6px;
-    border-bottom: 2px solid #f01d4f;
+    padding: 12px 24px;
+    border-bottom: 2px solid #dbdbdb;
     position: relative; }
     .bones_page_navi li.bpn-current a {
       /* hovering on current page link */ }
@@ -960,7 +1402,7 @@ PAGE NAVI STYLES
     font-weight: 700; }
     .bones_page_navi li.bpn-prev-link a,
     .bones_page_navi li.bpn-next-link a {
-      padding: 0; }
+      padding: 12px 24px; }
   .bones_page_navi li.bpn-prev-link a:hover,
   .bones_page_navi li.bpn-next-link a:hover,
   .bones_page_navi li.bpn-first-page-link a:hover,
@@ -1125,14 +1567,23 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
+.sidebar {
+  margin-top: 2.2em; }
+
 .widget ul li {
   /* deep nesting */ }
+
+#sidebartop {
+  text-align: center;
+  position: relative; }
 
 /*********************
 FOOTER STYLES
 *********************/
 .footer {
-  clear: both; }
+  clear: both;
+  min-height: 40px;
+  padding: 20px 0; }
 
 /*
 if you checked out the link above:
@@ -1152,8 +1603,8 @@ tweeners.
 */
 @media only screen and (min-width: 481px) {
   /******************************************************************
-  Site Name: 
-  Author: 
+  Site Name: Freek Rooze
+  Author:	Tim de Groot
   
   Stylesheet: 481px and Up Stylesheet
   
@@ -1188,6 +1639,20 @@ tweeners.
           */ }
 
   /* end .menu */
+  /*********************
+  HEADER STYLES
+  *********************/
+  #pageheader .featurecontent {
+    height: 410px; }
+    #pageheader .featurecontent .h1 {
+      top: 30px;
+      left: 10%; }
+      #pageheader .featurecontent .h1 h1 {
+        font-size: 1.2em;
+        font-weight: 300; }
+      #pageheader .featurecontent .h1 img {
+        width: 153px; }
+
   /*********************
   POSTS & CONTENT STYLES
   *********************/
@@ -1225,8 +1690,8 @@ you can add resource intensive styles.
 */
 @media only screen and (min-width: 768px) {
   /******************************************************************
-  Site Name:
-  Author:
+  Site Name: Freek Rooze
+  Author:	Tim de Groot
   
   Stylesheet: Grid Stylesheet
   
@@ -1259,7 +1724,7 @@ you can add resource intensive styles.
 
   /* 22.05%; } /* grid_3  */
   .fourcol {
-    width: 31.491712705%; }
+    width: 33.491712705%; }
 
   /* 30.75%; } /* grid_4  */
   .fivecol {
@@ -1297,17 +1762,17 @@ you can add resource intensive styles.
   .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
     position: relative;
     float: left;
-    margin-left: 2.762430939%; }
+    padding-left: 2.762430939%; }
 
   .first {
-    margin-left: 0; }
+    padding-left: 0; }
 
   .last {
     float: right; }
 
   /******************************************************************
-  Site Name:
-  Author:
+  Site Name: Freek Rooze
+  Author:	Tim de Groot
   
   Stylesheet: Tablet & Small Desktop Stylesheet
   
@@ -1325,55 +1790,91 @@ you can add resource intensive styles.
   LAYOUT & GRID STYLES
   *********************/
   .wrap {
-    max-width: 1140px; }
+    max-width: 960px; }
+
+  .sixcol.coaching-intro {
+    margin: 0; }
+
+  .sixcol.coaching-intro {
+    text-align: center;
+    padding: 0px 53px;
+    margin: 0 0 4em 0; }
+
+  .section_title p {
+    padding: 0 20%;
+    text-align: center;
+    font-size: 1.15em;
+    font-weight: 400;
+    color: #9a9fa2;
+    margin: 0 0 3.5em 0; }
 
   /*********************
   HEADER STYLES
   *********************/
-  .pageheader {
-    overflow: hidden;
-    height: 410px; }
-    .pageheader .featurecontent {
-      max-width: 960px;
-      height: 410px;
-      background-image: url("/library/img/img_feature.png");
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      -moz-border-radius: 10px 10px 0 0;
-      -webkit-border-top-left-radius: 10px;
-      -webkit-border-top-right-radius: 10px;
+  .header #inner-header #logo {
+    margin: 18px 0 0 30px; }
+
+  .featurecontent {
+    height: 410px;
+    margin: 0 auto;
+    background-image: url("/wp-content/themes/FR/library/images/img_feature@2x.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    border-radius: 5px 5px 0 0; }
+    .featurecontent img {
+      max-width: 100%;
+      -moz-border-radius: 5px 5px 0 0;
+      -webkit-border-top-left-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
       -webkit-border-bottom-right-radius: 0;
       -webkit-border-bottom-left-radius: 0;
-      border-radius: 10px 10px 0 0; }
+      border-radius: 5px 5px 0 0; }
+
+  #pageheader .featurecontent .h1 h1 {
+    font-size: 1.3em; }
 
   /*********************
   NAVIGATION STYLES
   *********************/
-  .nav {
+  #pull {
+    display: none; }
+
+  nav {
     background: transparent;
     border: 0;
     float: right;
+    width: auto;
     /* end .menu ul li */
     /* highlight current page */
     /* end current highlighters */ }
-    .nav li {
-      float: left;
-      position: relative;
+    nav ul#menu-global {
+      margin-top: 21px;
+      display: block;
       /*
       plan your menus and drop-downs wisely.
       */
       /* showing sub-menus */ }
-      .nav li a {
-        border-bottom: 0;
-        /*
-        you can use hover styles here even though this size
-        has the possibility of being a mobile device.
-        */ }
-        .nav li a:hover, .nav li a:focus {
-          background-color: transparent; }
-      .nav li ul.sub-menu,
-      .nav li ul.children {
+      nav ul#menu-global li {
+        float: left;
+        position: relative; }
+        nav ul#menu-global li a, nav ul#menu-global li a:visited, nav ul#menu-global li a:active {
+          border-bottom: 0;
+          padding: 10px 10px;
+          font-size: 14px;
+          /*
+          you can use hover styles here even though this size
+          has the possibility of being a mobile device.
+          */ }
+          nav ul#menu-global li a:hover, nav ul#menu-global li a:focus, nav ul#menu-global li a:visited:hover, nav ul#menu-global li a:visited:focus, nav ul#menu-global li a:active:hover, nav ul#menu-global li a:active:focus {
+            background-color: transparent; }
+      nav ul#menu-global ul.sub-menu,
+      nav ul#menu-global ul.children {
         margin-top: 0;
         border: 1px solid #ccc;
         border-top: 0;
@@ -1381,36 +1882,113 @@ you can add resource intensive styles.
         display: none;
         z-index: 8999;
         /* highlight sub-menu current page */ }
-        .nav li ul.sub-menu li,
-        .nav li ul.children li {
+        nav ul#menu-global ul.sub-menu li,
+        nav ul#menu-global ul.children li {
           /*
           if you need to go deeper, go nuts
           just remember deeper menus suck
           for usability. k, bai.
           */ }
-          .nav li ul.sub-menu li a,
-          .nav li ul.children li a {
+          nav ul#menu-global ul.sub-menu li a,
+          nav ul#menu-global ul.children li a {
             padding-left: 10px;
             border-right: 0;
             display: block;
             width: 180px;
             border-bottom: 1px solid #ccc; }
-          .nav li ul.sub-menu li:last-child a,
-          .nav li ul.children li:last-child a {
+          nav ul#menu-global ul.sub-menu li:last-child a,
+          nav ul#menu-global ul.children li:last-child a {
             border-bottom: 0; }
-      .nav li:hover ul {
+      nav ul#menu-global:hover ul {
         top: auto;
         display: block; }
 
   /* end .nav */
+  /******************************************************************
+  NEWSLETTER FORM STYLES
+  ******************************************************************/
+  #newsletter form {
+    max-width: 500px;
+    margin: 0 auto; }
+    #newsletter form input[type=submit], #newsletter form a {
+      display: inline-block;
+      border: none;
+      font-size: 19px;
+      line-height: normal;
+      padding: 20px 32px;
+      min-width: 215px;
+      float: none;
+      margin: 0;
+      position: static;
+      transform: translate(0, 0);
+      -webkit-transform: translate(0, 0);
+      -o-transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+      -moz-border-radius: 0 10px 10px 0;
+      -webkit-border-top-left-radius: 0;
+      -webkit-border-top-right-radius: 10px;
+      -webkit-border-bottom-right-radius: 10px;
+      -webkit-border-bottom-left-radius: 0;
+      border-radius: 0 10px 10px 0; }
+      #newsletter form input[type=submit] img, #newsletter form a img {
+        margin-left: 20px; }
+    #newsletter form input[type=text],
+    #newsletter form input[type=email],
+    #newsletter form input[type=url],
+    #newsletter form textarea {
+      padding: 20px 32px;
+      background: white;
+      border: none;
+      font-size: 19px;
+      text-align: left;
+      position: static;
+      transform: translate(0, 0);
+      -webkit-transform: translate(0, 0);
+      -o-transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+      -moz-border-radius: 10px 0 0 10px;
+      -webkit-border-top-left-radius: 10px;
+      -webkit-border-top-right-radius: 0;
+      -webkit-border-bottom-right-radius: 0;
+      -webkit-border-bottom-left-radius: 10px;
+      border-radius: 10px 0 0 10px;
+      /* form validation */ }
+      #newsletter form input[type=text]:focus,
+      #newsletter form input[type=email]:focus,
+      #newsletter form input[type=url]:focus,
+      #newsletter form textarea:focus {
+        background: #fff; }
+      #newsletter form input[type=text]:invalid,
+      #newsletter form input[type=email]:invalid,
+      #newsletter form input[type=url]:invalid,
+      #newsletter form textarea:invalid {
+        outline: none;
+        border-color: #fbc2c4;
+        background-color: #f6e7eb;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -ms-box-shadow: none;
+        box-shadow: none; }
+    #newsletter form input[type=text],
+    #newsletter form input[type=email],
+    #newsletter form input[type=url] {
+      max-width: 285px;
+      min-width: 250px; }
+    #newsletter form textarea {
+      resize: none;
+      width: 97.3%;
+      height: 150px; }
+
+  #Contact .social {
+    padding-left: 20%; }
+
   /*********************
   SIDEBARS & ASIDES
   *********************/
-  .sidebar {
-    margin-top: 2.2em; }
-
   .widgettitle {
-    border-bottom: 2px solid #444;
+    border-bottom: none;
     margin-bottom: 0.75em; }
 
   .widget {
